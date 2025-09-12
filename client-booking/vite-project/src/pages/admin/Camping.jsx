@@ -16,7 +16,7 @@ const Camping = () => {
     const { register, handleSubmit, formState, setValue } = useForm({
         // resolver is for validating the form data
         // zodResolver is a function that integrates Zod with React Hook Form
-        resolver: zodResolver( campingSchema ),
+        resolver: zodResolver( campingSchema ), //แสดงข้อกำหนดแต่ละตัวอักษร
     });
     // errors = formState.errors, re-structure ออกจาก formState
       //isSubmitting is false , true ส่งข้อมูล
@@ -25,7 +25,7 @@ const Camping = () => {
      // data - ข้อมูลที่ถูกส่งมาจากฟอร์ม !!!
     const share = async( data) => {
         // Simulate a delay for demonstration purposes
-     await new Promise((resolve) => setTimeout(resolve, 4000));
+     await new Promise((resolve) => setTimeout(resolve, 3000));
         //code body
         console.log(data);
     };
