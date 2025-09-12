@@ -1,5 +1,7 @@
+// send to server (away)
 const express = require('express');
 const router = express.Router();
+
 const {listCamping,readCamping,
     createCamping,updateCamping,
     deleteCamping} = require('../controllers/camping');

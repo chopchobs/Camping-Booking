@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/Notfound";
 import Camping from "@/pages/admin/Camping";
 import { BrowserRouter, Route, Routes } from "react-router";
+import Profile from "@/pages/user/Profile";
 
 const AppRouter = () => {
   return (
@@ -19,7 +20,12 @@ const AppRouter = () => {
           <Route path="about" element={<About />} />
         </Route>
 
-        {/* Private Routes */}
+        {/* Private Users */}
+        <Route path="user" element={<Layout/>}>
+          <Route path="profile" element={<Profile/>}/>
+        </Route>
+
+        {/* Private Admins */}
         <Route path="admin" element={<LayoutAdmin />}>
           <Route index element={<Dashboard />} />
           <Route path="manage" element={<Manage />} />

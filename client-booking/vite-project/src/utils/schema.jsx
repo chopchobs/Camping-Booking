@@ -12,3 +12,14 @@ export const campingSchema = z.object({
     lng: z.string().min(1,"Longitude is required").transform((lng) => parseFloat(lng)),
 });
 
+export const profileSchema=z.object({
+    firstname: z.string()
+        .min(2,"FirstName must be at least 2 characters long")
+        .max(80,"FirstName must be at most 80 characters long"),
+    lastname: z.string()
+        .min(2,"LastName must be at least 2 characters long")
+        .max(80,"LastName must be at most 80 characters long"),
+    
+    
+})
+
