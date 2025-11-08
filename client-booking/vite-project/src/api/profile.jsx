@@ -1,6 +1,6 @@
     import axios from "axios";
-
-export const createProfile =async(data,token)=>{
+    
+    export const createProfile =async(data,token)=>{
     //code boy 
     // console.log('func create profile-DATA:',data);
     // console.log('func create profile-ToKen:',token);

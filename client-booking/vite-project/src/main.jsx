@@ -13,15 +13,15 @@ if (!PUBLISHABLE_KEY) {
 }
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <>
      <Toaster position="top-right" richColor />
-    <ClerkProvider 
-      publishableKey={PUBLISHABLE_KEY} 
-      signInFallbackRedirectUrl='/' // ✅ fallback หลัง sign in
-      signUpForceRedirectUrl='/'   // ✅ หลังสมัคร
-      afterSignOutUrl='/'          // ✅ หลังออกจากระบบ
+     <ClerkProvider 
+        publishableKey={ PUBLISHABLE_KEY }  
+        signInFallbackRedirectUrl='/' // ✅ fallback หลัง sign in
+        signUpForceRedirectUrl='/'   // ✅ หลังสมัคร
+        afterSignOutUrl='/'          // ✅ หลังออกจากระบบ
       >
      <App />
     </ClerkProvider>
-  </StrictMode>,
+  </>,
 )

@@ -8,16 +8,12 @@ const Navbar = () => {
     <nav>
       <div className="flex flex-col items-center py-4 px-8 justify-between sm:flex-row
        gap-4">
-
-        {/* Logo */}
+      {/* Logo */}
         <h1><Logo/></h1>
-
-        {/* Search bar... */}
+      {/* Search bar... */}
         <h1><SearchBar /></h1>
-
-        {/* Profile */}
+      {/* Profile */}
         <h1><DropsDownList /></h1>
-
       </div>
     </nav>
   )

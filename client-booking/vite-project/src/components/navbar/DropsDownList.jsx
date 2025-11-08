@@ -9,44 +9,45 @@ import {
 import { AlignLeft, AlignCenter, AlignRight, AlignJustify } from 'lucide-react';
 import UserIcon from "./UserIcon";
 import { Button } from "../ui/button";
-import { Links } from "../../utils/Links";
+import { publicLinks ,privateLinks } from "../../utils/Links";
 import { Link } from "react-router";
-import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUp, SignUpButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, SignInButton, SignOutButton, 
+  SignUp, SignUpButton, UserButton } from '@clerk/clerk-react';
 import SignOutLink from "./SignOutLink";
 
 
 const DropsDownList = () => {
   return (
-    <DropdownMenu>
+    <DropdownMenu >
       <DropdownMenuTrigger asChild>
       {/* บนขวา */}
-       <Button variant='outline'>
+       <Button variant='outline' className="rounded-full">
          <AlignLeft />
           <SignedIn>
-            <UserButton />
+            <UserIcon />
           </SignedIn>
           <SignedOut>
             <UserIcon />
           </SignedOut>
        </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
+      <DropdownMenuContent className=" bg-white rounded-md" >
+          <DropdownMenuLabel className="font-semibold">My Account</DropdownMenuLabel>
+          <DropdownMenuSeparator className="my-1 h-px bg-gray-200 dark:bg-gray-200"/>
           {
-            Links.map((item,index) => {
+            publicLinks.map((item,index) => {
               return (
                 <DropdownMenuItem key={index}>
                  <Link to={item.href}>
                    {item.label}
                  </Link>
                 </DropdownMenuItem>
-              )
+              );
             })}
-          <DropdownMenuSeparator />
+          <DropdownMenuSeparator className="my-1 h-px bg-gray-200 dark:bg-gray-200"/>
 
           {/* Not Logged In */}
-          <SignedOut>
+          <SignedOut className="flex flex-col gap-2 px-2">
             <DropdownMenuItem>
               <SignInButton mode='modal'>
                 <button>Login</button>
@@ -60,7 +61,18 @@ const DropsDownList = () => {
           </SignedOut>
 
           {/* Logged In */}
-            <SignedIn>
+            <SignedIn className="flex flex-col gap-2 px-2">
+            {
+            privateLinks.map((item,index) => {
+              return (
+                <DropdownMenuItem key={index}>
+                 <Link to={item.href}>
+                   {item.label}
+                 </Link>
+                </DropdownMenuItem>
+              );
+            })}
+              <DropdownMenuSeparator className="my-1 h-px bg-gray-200 dark:bg-gray-200" />
               <DropdownMenuItem>
                 <SignOutLink/>
               </DropdownMenuItem>
