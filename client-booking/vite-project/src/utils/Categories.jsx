@@ -11,7 +11,7 @@ import {
 export const categories = [
   {
     label: "camping",
-    icon: Tent,
+    icon: Tent, 
   },
   {
     label: "house",

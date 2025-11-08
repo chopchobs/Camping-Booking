@@ -5,7 +5,7 @@ const LayoutAdmin = () => {
   return (
     <main className="container">
         <NavbarAdmin/>
-        <Outlet />
+        <Outlet /> 
     </main>
   )
 }

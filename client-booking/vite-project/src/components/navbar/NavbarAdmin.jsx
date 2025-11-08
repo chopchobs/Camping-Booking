@@ -5,20 +5,15 @@ import SearchBar from "./SearchBar";
 const NavbarAdmin = () => {
   return (
     <nav>
-      <div className="flex flex-col items-center py-4 px-8 justify-between sm:flex-row
-       gap-4">
-        
-        {/* Logo */}
+     <div className="flex flex-col items-center py-4 px-8 
+     justify-between sm:flex-row gap-4">
+      {/* Logo */}
         <h1><Logo/></h1>
-
-        {/* Search bar... */}
+      {/* Search bar... */}
         <h1><SearchBar /></h1>
-
-        {/* Profile */}
-        <h1>
-          <DropsDownList />
-        </h1>
-      </div>
+      {/* Profile */}
+        <h1><DropsDownList /></h1>
+     </div>
     </nav>
   )
 }

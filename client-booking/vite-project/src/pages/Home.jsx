@@ -1,8 +1,9 @@
+import CampingContainer from "@/components/home/CampingContainer";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <CampingContainer/>
     </div>
   )
 }

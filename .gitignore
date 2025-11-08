@@ -1,0 +1,28 @@
+# 🧩 Environment files (ห้ามส่งขึ้น GitHub)
+.env
+*.env
+Server-Booking/Server/.env
+client-booking/vite-project/.env
+
+# 📦 Dependencies
+node_modules/
+
+# 🏗️ Build output
+dist/
+.next/
+out/
+build/
+
+# 💻 VS Code settings
+.vscode/
+
+# 🍎 macOS system file
+.DS_Store
+
+# ⚙️ Prisma migrations (optional — ถ้าไม่อยากส่งขึ้น)
+# Server-Booking/Server/prisma/migrations/
+
+# 🔥 Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

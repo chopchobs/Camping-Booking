@@ -1,6 +1,10 @@
+import StateContainer from "@/components/admin/StateContainer";
+
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <StateContainer/>
+    </div>
   )
 }
-export default Dashboard
+export default Dashboard;
